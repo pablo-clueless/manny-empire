@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Titillium+Web:wght@200;300;400&display=swap');
+
+:root {
+  --dark: #000;
+  --light: #fff;
+  --pry: #b87c4c;
+  --titilium: 'Titillium Web', sans-serif;
+  --dancing: 'Dancing Script', sans-serif;
+  --transition: 0.5s all ease;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+*, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--titilium);
+}
+
+h1, h2,
+h3, h4,
+h5, h6 {
+  font-family: var(--dancing);
+}
+
+a {
+  text-decoration: none;
+}
