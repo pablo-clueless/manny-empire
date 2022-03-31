@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { FiInstagram, FiFacebook } from 'react-icons/fi'
 
 import '../styles/NavBar.css'
 
@@ -55,6 +56,15 @@ const NavBar = () => {
                             <Link to={'/contact'}>Contact</Link>
                         </li>
                     </ul>
+
+                    <div className='group'>
+                        <a href='https://instagram.com/victoriamanny_empire' target='_blank' rel='noreferrer noopener' >
+                            <FiInstagram />
+                        </a>
+                        <a href='' target='_blank' rel='noreferrer noopener' >
+                            <FiFacebook />
+                        </a>
+                    </div>
                 </nav>
         </div>
     </nav>

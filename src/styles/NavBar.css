@@ -138,6 +138,25 @@
     transition: var(--transition);
 }
 
+.group {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.group a {
+    color: var(--light);
+    font-size: 2rem;
+    margin: 0 1rem;
+    transition: var(--transition);
+}
+
+.group a:hover {
+    transform: scale(1.1);
+}
+
 @media (hover: hover) and (pointer: fine) {
     .nav ul li a:hover::before{
         left: 0;
