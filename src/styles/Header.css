@@ -4,3 +4,9 @@
     margin-bottom: 1rem;
     background: url('/stock_8.jpeg')no-repeat center/cover ;
 }
+
+@media screen and (max-width: 800px) {
+    .header {
+        height: 80vh;
+    }
+}
