@@ -9,7 +9,6 @@ const Header = () => {
   return (
     <header className='header'>
         <NavBar />
-        <Carousel />
     </header>
   )
 }

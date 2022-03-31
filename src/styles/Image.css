@@ -3,9 +3,9 @@
 }
 
 .image_container img {
-    width: 330px;
+    width: 300px;
     border-radius: 10px;
-    margin: 1rem 0;
+    margin: 1rem;
     transition: var(--transition);
 }
 
@@ -32,4 +32,15 @@
 
 .action:hover {
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 645px) {
+    .image_container {
+        display: grid;
+        place-items: center;
+    }
+    
+    .image_container img {
+        width: 80%;
+    }
 }
