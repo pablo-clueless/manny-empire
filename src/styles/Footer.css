@@ -1,0 +1,55 @@
+.footer {
+    width: 100%;
+    padding: 1rem 1rem 0.5rem;
+    display: grid;
+    place-items: center;
+}
+
+.footer p {
+    font-family: var(--dancing);
+    color: var(--pry);
+    font-size: 1.5rem;
+}
+
+.footer .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer .grid img {
+    width: 50%;
+}
+
+.footer .grid .grid_ {
+    display: grid;
+    place-items: center;
+}
+
+.footer .grid .grid_ p {
+    font-family: var(--titilium);
+}
+
+.footer .grid .grid_ ul {
+    display: flex;
+    list-style: none;
+}
+
+.footer .grid .grid_ ul li {
+    margin: 0 1rem;
+}
+
+.footer .grid .grid_ ul li a {
+    color: var(--pry);
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.footer .grid .grid_ ul li a:hover {
+    color: var(--dark);
+}
+
+@media screen and (max-width: 800px) {
+    .footer p {
+        font-size: 1rem;
+    }
+}

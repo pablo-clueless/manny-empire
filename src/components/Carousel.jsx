@@ -24,12 +24,6 @@ const Carousel = () => {
         <button className='right-button' onClick={next}>
             <FiArrowRightCircle />
         </button>
-        {/* <Link to={'/contat'}>
-            <button className='cta-button'>
-                contact us
-            </button>
-        </Link>
-         */}
          {Data.map((slide, index) => {
                   return(
                       <div  className={index === current ? 'slide active' : 'slide'} key={index}>
