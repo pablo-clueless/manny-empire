@@ -25,7 +25,7 @@ const NavBar = () => {
                 <Link to={'/'}>Home</Link>
             </li>
             <li>
-                <Link to={'/about'}>About</Link>
+                <Link to={'/store'}>4K Boutique</Link>
             </li>
             <li>
                 <Link to={'/gallery'}>Gallery</Link>
@@ -47,7 +47,7 @@ const NavBar = () => {
                             <Link to={'/'}>Home</Link>
                         </li>
                         <li>
-                            <Link to={'/about'}>About</Link>
+                            <Link to={'/store'}>4K Boutique</Link>
                         </li>
                         <li>
                             <Link to={'/gallery'}>Gallery</Link>

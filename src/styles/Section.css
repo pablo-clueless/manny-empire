@@ -1,0 +1,87 @@
+.section {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.section.reverse {
+    flex-direction: row-reverse;
+}
+
+.section-image {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.section-image img {
+    width: 130%;
+    height: 100%;
+    opacity: 0.6;
+    transition: var(--transition);
+}
+
+.section-image img:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.section-caption {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--pry);
+}
+
+.section-caption h1 {
+    text-transform: uppercase;
+    color: var(--light);
+    font-family: var(--titilium);
+}
+
+.section-caption p {
+    color: var(--light);
+    padding: 0 1.5rem;
+}
+
+.section-caption span {
+    width: 20%;
+    height: 1px;
+    background: var(--light);
+    margin: 1rem 0;
+}
+
+.section-caption a {
+    padding: 0.1rem 0.5rem;
+    margin: 1rem 0;
+    color: var(--light);
+    background: transparent;
+    border: 1px solid var(--light);
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.section-caption a:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px) {
+    .section {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .section-image img {
+        z-index: -1;
+    }
+}

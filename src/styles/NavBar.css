@@ -3,7 +3,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 1rem 2rem;
+    background: var(--light);
+    padding: 0.5rem 1rem;
     position: fixed;
     top: 0;
 }
@@ -13,7 +14,7 @@
 }
 
 .nav h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: var(--pry);
 }
 
@@ -30,6 +31,7 @@
     position: relative;
     color: var(--dark);
     font-size: 1rem;
+    font-weight: 400;
     transition: var(--transition);
 }
 
@@ -40,7 +42,7 @@
 .nav ul li a::before{
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -10%;
     right: 0;
     width: 0;
     height: 3px;
