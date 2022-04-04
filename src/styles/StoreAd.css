@@ -46,6 +46,7 @@
 .store-ad .image-container .frame {
     width: 70%;
     background: url('/material_1.png') no-repeat;
+    position: relative;
 }
 
 .store-ad .image-container .frame img {
