@@ -1,19 +1,12 @@
-import React, { useState } from 'react'
-import { FiDownloadCloud } from 'react-icons/fi'
+import React from 'react'
 
 import '../styles/Image.css'
 
 const Image = ({ src, alt }) => {
-  const [hovered, setHovered] = useState(false)
 
   return (
-    <div className='image-container' onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} >
+    <div className='image-container' >
         <img src={src} alt={alt} />
-        {hovered && (
-          <a href={src} download className='action'>
-            <FiDownloadCloud />
-          </a>
-        )}
     </div>
   )
 }
