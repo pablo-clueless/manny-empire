@@ -10,7 +10,7 @@ const breakpointObj = {
     1575: 3,
     1200: 3,
     1000: 2,
-    645: 1
+    645: 2
 }
 
 const MasonryLayout = ({ images }) => {
