@@ -1,0 +1,13 @@
+.store-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 3.5rem;
+    padding: 2rem 0.5rem;
+}
+
+.store-header h1 {
+    width: 100%;
+    color: var(--pry);
+    text-align: center;
+}

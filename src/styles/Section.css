@@ -23,8 +23,9 @@
 .section-image img {
     width: 130%;
     height: 100%;
-    opacity: 0.6;
+    opacity: 0.7;
     transition: var(--transition);
+    position: relative;
 }
 
 .section-image img:hover {
@@ -39,17 +40,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--pry);
 }
 
 .section-caption h1 {
     text-transform: uppercase;
-    color: var(--light);
-    font-family: var(--titilium);
+    color: var(--pry);
 }
 
 .section-caption p {
-    color: var(--light);
+    color: var(--pry);
     padding: 0 1.5rem;
     margin: 1rem 0;
     text-align: center;
@@ -58,27 +57,26 @@
 .section-caption span {
     width: 20%;
     height: 1px;
-    background: var(--light);
+    background: var(--pry);
     margin: 1rem 0;
 }
 
 .section-caption i {
-    color: var(--light);
+    color: var();
 }
 
 .section-caption a {
     padding: 0.1rem 0.5rem;
     margin: 1rem 0;
-    color: var(--light);
+    color: var(--pry);
     background: transparent;
-    border: 1px solid var(--light);
-    font-size: 1rem;
+    border: 1px solid var(--pry);
     text-transform: uppercase;
     transition: var(--transition);
 }
 
 .section-caption a:hover {
-    transform: scale(1.1);
+    transform: scale(0.95);
 }
 
 @media screen and (max-width: 800px) {
