@@ -51,6 +51,8 @@
 .section-caption p {
     color: var(--light);
     padding: 0 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
 }
 
 .section-caption span {
@@ -58,6 +60,10 @@
     height: 1px;
     background: var(--light);
     margin: 1rem 0;
+}
+
+.section-caption i {
+    color: var(--light);
 }
 
 .section-caption a {

@@ -13,7 +13,7 @@ const Footer = () => {
                 <p>GET IN TOUCH</p>
                 <ul>
                     <li>
-                        <a href='https://instagram.com/victoriamanny-empire' target='_blank' rel='noreferrer noopener' >
+                        <a href='https://instagram.com/victoriamanny_empire' target='_blank' rel='noreferrer noopener' >
                             <FiInstagram />
                         </a>
                     </li>

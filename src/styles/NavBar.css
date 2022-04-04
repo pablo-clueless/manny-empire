@@ -4,9 +4,11 @@
     justify-content: space-between;
     width: 100%;
     background: var(--light);
+    box-shadow: 0 2px 5px var(--dark);
     padding: 0.5rem 1rem;
     position: fixed;
     top: 0;
+    z-index: 2;
 }
 
 .nav img {
@@ -141,6 +143,10 @@
     color: var(--light);
     font-size: 1.2rem;
     transition: var(--transition);
+}
+
+.menu nav ul li a:hover {
+    color: var(--dark);
 }
 
 .group {
