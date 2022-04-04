@@ -8,7 +8,7 @@
 .footer p {
     font-family: var(--dancing);
     color: var(--pry);
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .footer .grid {
