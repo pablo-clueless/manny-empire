@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import NavBar from '../components/NavBar'
 import Section from '../components/Section'
 import StoreAd from '../components/StoreAd'
+import SwiperComponent from '../components/Swiper'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
     <Header />
     <NavBar />
     <StoreAd />
+    {/* <SwiperComponent /> */}
     <Section />
     <Footer />
     </>

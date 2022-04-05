@@ -1,16 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { FiFacebook, FiInstagram } from 'react-icons/fi'
 
-import NavBar from './NavBar'
-import Carousel from './Carousel'
-import Image from './Image'
 import '../styles/Header.css'
 
 const Header = () => {
 
   return (
     <header className='header'>
-        <Link to={'/gallery'}>explore our beautiful crafts</Link>
+      <div className='right'></div>
+      <div className='left'>
+      </div>
+      
+      <div className='button'>
+        <Link to={'/gallery'}>
+          explore our beautiful crafts
+        </Link>
+      </div>
     </header>
   )
 }
