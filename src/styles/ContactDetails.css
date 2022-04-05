@@ -69,6 +69,22 @@
     color: var(--light);
 }
 
+.contact-form .error {
+    color: red;
+    background: var(--light);
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: var(--titilium);
+}
+
+.contact-form .success {
+    color: green;
+    background: var(--light);
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: var(--titilium);
+}
+
 .contact-form,
 .contact-form form {
     display: grid;

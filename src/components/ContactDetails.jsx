@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FiInstagram, FiFacebook, FiPhone, FiMapPin, FiMail, FiTwitter } from 'react-icons/fi'
 
 import '../styles/ContactDetails.css'
+import { useForm } from '../hooks/useForm'
 
 const ContactDetails = () => {
     const [name, setName] = useState('')
@@ -9,7 +10,8 @@ const ContactDetails = () => {
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
 
-    
+    const { submitted, loading, error, sendMail } = useForm('https://public.herotofu.com/v1/9ca8e3e0-b4e4-11ec-b4fe-2b9cbf782176')
+
     const handleFormSubmit = (e) => {
         e.preventDefault()
 
@@ -17,10 +19,7 @@ const ContactDetails = () => {
             alert('Please fill all fields')
         }
 
-        setName('')
-        setMail('')
-        setPhone('')
-        setMessage('')
+        sendMail({ name, mail, phone, message })
     }
 
 
@@ -66,6 +65,9 @@ const ContactDetails = () => {
         </div>
         <div className='contact-form'>
             <h1>Got an enquiry?</h1>
+            {error && <h1 className='error'>Error sending form data! Please try again.</h1>}
+            {submitted && <h1 className='success'>Sent successfully!</h1>}
+            {loading && <div className='loading'></div>}
             <form onSubmit={handleFormSubmit} >
                 <div className="control-group">
                     <input type='text' id='name' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
