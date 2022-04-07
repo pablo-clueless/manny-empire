@@ -6,8 +6,13 @@
     padding: 2rem 0.5rem;
 }
 
-.store-header h1 {
+.store-header h1,
+.store-header p {
     width: 100%;
     color: var(--pry);
     text-align: center;
+}
+
+.store-header img {
+    width: 70%;
 }
