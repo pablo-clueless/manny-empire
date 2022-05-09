@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <nav className='nav'>
         <Link to={'/'}>
-            <img src="/vm_logo.png" alt="brand logo" />
+            <img src="/vme_new_light.png" alt="brand logo" />
         </Link>
         
 

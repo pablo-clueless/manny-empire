@@ -11,8 +11,12 @@
     z-index: 2;
 }
 
-.nav img {
+.nav a {
     width: 25%;
+}
+
+.nav img {
+    width: 30%;
 }
 
 .nav h1 {
@@ -33,7 +37,7 @@
 .nav ul li a {
     position: relative;
     color: var(--dark);
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 400;
     transition: var(--transition);
 }
