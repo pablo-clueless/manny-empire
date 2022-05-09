@@ -9,7 +9,7 @@ const Section = (props) => {
   return (
     <section className={`section ${props.reverse && 'reverse'}`}>
         <div className='section-image'>
-            <img src='/stock_2.jpeg' alt='stock image' />
+            <img src='/stock_6.jpeg' alt='stock image' />
         </div>
         <div className='section-caption'>
           <span></span>
