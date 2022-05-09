@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className='footer'>
         <div className='grid'>
-            <img src="/vm_logo.png" alt="" />
+            <img src="/vme_new_dark.png" alt="" />
 
             <div className='grid_'>
                 <p>GET IN TOUCH</p>

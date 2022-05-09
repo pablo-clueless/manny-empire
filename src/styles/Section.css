@@ -43,7 +43,8 @@
 }
 
 .section-caption h1 {
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-size: 3rem;
     color: var(--pry);
 }
 

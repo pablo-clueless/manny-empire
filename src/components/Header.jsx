@@ -9,8 +9,7 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='right'></div>
-      <div className='left'>
-      </div>
+      <div className='left'></div>
       
       <div className='button'>
         <Link to={'/gallery'}>

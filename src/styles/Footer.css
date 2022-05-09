@@ -1,24 +1,27 @@
 .footer {
     width: 100%;
-    padding: 1rem 1rem 0.5rem;
+    background: var(--dark);
+    padding: 0.5rem 1rem;
     display: grid;
     place-items: center;
 }
 
 .footer p {
     font-family: var(--dancing);
-    color: var(--pry);
+    color: var(--light);
     font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 .footer .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0.5rem 0;
 }
 
 .footer .grid img {
-    width: 40%;
+    width: 20%;
 }
 
 .footer .grid .grid_ {
@@ -33,6 +36,7 @@
 .footer .grid .grid_ ul {
     display: flex;
     list-style: none;
+    margin: 0.5rem 0;
 }
 
 .footer .grid .grid_ ul li {
@@ -40,13 +44,13 @@
 }
 
 .footer .grid .grid_ ul li a {
-    color: var(--pry);
+    color: var(--light);
     font-size: 2rem;
     transition: var(--transition);
 }
 
 .footer .grid .grid_ ul li a:hover {
-    color: var(--dark);
+    color: var(--light);
 }
 
 @media screen and (max-width: 800px) {
