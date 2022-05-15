@@ -1,6 +1,6 @@
 export const MasonryData = [
     { image: '/stock_1.jpeg', alt: '' },
-    { image: '/stock_2.jpeg', alt: '' },
+    // { image: '/stock_2.jpeg', alt: '' },
     { image: '/stock_3.jpeg', alt: '' },
     // { image: '/stock_4.jpeg', alt: '' },
     { image: '/stock_5.jpeg', alt: '' },
