@@ -17,4 +17,4 @@ export { default as Showcase } from './Showcase'
 export { default as Sidebar } from './Sidebar'
 
 
-// export { default as Navbar } from './Navbar'
+// export { default as Navbar } from './Navbar.jsx'
