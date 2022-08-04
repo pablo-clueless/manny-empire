@@ -3,10 +3,11 @@ import { Routes, Route } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { Catalogue, Checkout, Home, Modeling, Product } from './pages'
-import { Cart, LazyLoader, Navbar, Sidebar } from './components'
+import { Cart, LazyLoader, Sidebar } from './components'
 import { useContextProvider } from './contexts/ContextProvider'
 import { calculateTotal } from './store/slices/cart-slice'
 import { getWithKey } from './lib'
+import Navbar from './components/Navbar'
 
 const App = () => {
   const { activeMenu, setActiveMenu, currentMode, screenSize, setScreenSize, isClicked, setThemeMode } = useContextProvider()
