@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { HiMenuAlt4, HiOutlineMoon, HiOutlineShoppingBag, HiOutlineSun, HiX } from 'react-icons/hi'
 
 import { useContextProvider } from '../contexts/ContextProvider'
-import { IconButton } from './'
+import { IconButton } from '.'
 import logo from '../assets/images/vme_light.png'
 import darklogo from '../assets/images/vme_dark.png'
 import { NAVLINKS } from '../assets'
@@ -18,7 +18,7 @@ const NavLinks = ({to, name}) => (
   </NavLink>
 )
 
-const Navbar = () => {
+const Appbar = () => {
   const { currentMode, setThemeMode, activeMenu, setActiveMenu, handleClick } = useContextProvider()
   const { amount } = useSelector(store => store.cart)
 
@@ -61,4 +61,4 @@ const Navbar = () => {
 }
 
 
-export default Navbar
+export default Appbar

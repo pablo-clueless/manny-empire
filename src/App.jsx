@@ -7,7 +7,7 @@ import { Cart, LazyLoader, Sidebar } from './components'
 import { useContextProvider } from './contexts/ContextProvider'
 import { calculateTotal } from './store/slices/cart-slice'
 import { getWithKey } from './lib'
-import Navbar from './components/Navbar'
+import Appbar from './components/Appbar'
 
 const App = () => {
   const { activeMenu, setActiveMenu, currentMode, screenSize, setScreenSize, isClicked, setThemeMode } = useContextProvider()
@@ -46,7 +46,8 @@ const App = () => {
         <div className={`w-72 fixed top-0 ${activeMenu ? 'left-0' : '-left-full'} transition-all duration-300 sidebar`}>
           <Sidebar />
         </div>
-        <Navbar />
+        <Appbar />
+        {/* <Navbar /> */}
         <Suspense fallback={<LazyLoader />}>
           <Routes>
             <Route path='/' element={<Home />} />
