@@ -23,10 +23,6 @@ const Footer = () => {
         </div>
         <div className='flex flex-col items-center my-4 gap-1 text-black dark:text-white'>
           <div className='flex items-center gap-2'>
-            <IoLocationOutline />
-            <p>3, Orisunbare Close, Gbagada Phase 2, Lagos.</p>
-          </div>
-          <div className='flex items-center gap-2'>
             <FiPhone />
             <p>+2347014090495</p>
           </div>
