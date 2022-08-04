@@ -15,6 +15,10 @@ const initialState = {
   to: 'victoriasambo123@gmail.com',
 }
 
+const serviceId = import.meta.env.VITE_SERVICE_ID
+const templateId = import.meta.env.VITE_TEMPLATE_ID
+const apiKey = import.meta.env.VITE_API_KEY
+
 const Contact = () => {
   const [sendTo, setSendTo] = useState(initialState)
   const [loading, setLoading] = useState(false)
@@ -34,13 +38,11 @@ const Contact = () => {
     }
     setLoading(true)
     try {
-      const res = await emailjs.sendForm('service_o2bgy9p', 'template_g25wgmi', sendTo, 'ckzBhGDDzoGsts6zj')
-      console.log(res)
+      const res = await emailjs.sendForm(serviceId, templateId, formRef.current, apiKey)
       setSuccess(res)
       setLoading(false)
     } catch (error) {
-      console.log(error)
-      setError(error)
+      setError(error.text)
       setLoading(false)
     }
     handleReset()
