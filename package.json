@@ -2,23 +2,36 @@
   "name": "manny-empire",
   "private": true,
   "version": "0.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Samosn Okunola",
+    "url": "https://okunolasamson.dev"
+  },
+  "keywords": ["Fashion", "Online Store", "4K Boutique", "Victoria Manny Empire"],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "@reduxjs/toolkit": "^1.8.3",
     "atropos": "^1.0.2",
-    "framer-motion": "^6.2.8",
+    "framer-motion": "^6.5.1",
     "masonry-layout": "^4.2.2",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-masonry-css": "^1.0.16",
+    "react-redux": "^8.0.2",
     "react-router-dom": "^6.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^1.0.7",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.7",
     "vite": "^2.9.0"
   }
 }

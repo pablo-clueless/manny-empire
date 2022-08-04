@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Montserrat:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@700;800;900&family=Share+Tech+Mono&display=swap');
 
-:root {
-  --dark: #000;
-  --light: #fff;
-  --pry: #b87c4c;
-  --titilium: 'Montserrat', sans-serif;
-  --dancing: 'Sacramento', cursive;
-  --transition: 0.5s all ease;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 ::-webkit-scrollbar {
-  width: 0;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CECECE;
+  border-radius: 40px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 *, html {
@@ -19,16 +23,102 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: var(--titilium);
+  font-family: 'Share Tech Mono', monospace;
+  overflow-x: hidden;
 }
 
-h1, h2,
-h3, h4,
-h5, h6 {
-  font-family: var(--dancing);
+.nav-item, .navbar {
+  z-index: 1000;
 }
 
-a {
-  text-decoration: none;
+.sidebar {
+  box-shadow: rgb(113 122 131 / 30%) 0px 7px 30px 0px;
+  transition: 0.3s all ease;
+}
+
+.sidebar.dark {
+  box-shadow: rgb(255 255 255 / 1%) 0px 0px 0px 0px;
+  transition: 0.3s all ease;
+}
+
+.chat-bubble {
+  z-index: 1000000 !important;
+}
+
+.outline-text {
+  color: #E35A44;
+  -webkit-text-stroke: 1px #E35A44;
+  -webkit-text-fill-color: transparent;
+}
+
+.outline-text-gray {
+  color: #CECECE;
+  -webkit-text-stroke: 1px #CECECE;
+  -webkit-text-fill-color: transparent;
+}
+
+.spinner {
+  transform: rotate(90deg);
+  width: 30px;
+  height: 30px;
+}
+
+.spinner__path {
+  stroke-linecap: round;
+  stroke-dasharray: 360;
+  stroke-width: 2;
+  stroke: #FFF;
+  fill: transparent;
+  animation: spinner 2s ease-in-out 0s normal forwards infinite;
+}
+
+.alert {
+  z-index: 100000;
+}
+
+.backdrop {
+  z-index: 10000;
+  backdrop-filter: blur(2px);
+}
+
+.cart {
+  z-index: 1000000000 !important;
+  transition: 1s all ease-in-out 0.1s;
+}
+
+.cart__inner {
+  transition: 1s transform ease-in-out linear 0.2s;
+}
+
+/* .spin {
+  animation: spin 2s ease-in-out 0s normal forwards infinite;
+} */
+
+@keyframes spinner {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 40;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media  screen and (max-width:900px) {
+  .sidebar{
+    z-index: 100000;
+  }
 }

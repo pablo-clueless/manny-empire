@@ -1,74 +1,63 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { FiInstagram, FiFacebook } from 'react-icons/fi'
+import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { HiMenuAlt4, HiOutlineMoon, HiOutlineShoppingBag, HiOutlineSun, HiX } from 'react-icons/hi'
 
-import '../styles/NavBar.css'
+import { useContextProvider } from '../contexts/ContextProvider'
+import { IconButton } from './'
+import logo from '../assets/images/vme_light.png'
+import darklogo from '../assets/images/vme_dark.png'
+import { NAVLINKS } from '../assets'
 
-const NavBar = () => {
-    const [clicked, setClicked] = useState(false)
+const activeNavLink  = 'bg-gray-300 text-primary px-2 py-1 rounded-md  transition-colors duration-300 ease-in-out hover:bg-slate-200'
+const inactiveNavLink = 'bg-transparent text-primary px-2 py-1 rounded-md  transition-colors duration-300 ease-in-out hover:bg-slate-200'
 
-    const handleClick = () => {
-        setClicked(!clicked)
-    }
+const NavLinks = ({to, name}) => (
+  <NavLink to={to} title={name} className={({isActive}) => isActive ? activeNavLink : inactiveNavLink}>
+    {name}
+  </NavLink>
+)
+
+const Navbar = () => {
+  const { currentMode, setThemeMode, activeMenu, setActiveMenu, handleClick } = useContextProvider()
+  const { amount } = useSelector(store => store.cart)
 
   return (
-    <nav className='nav'>
-        <Link to={'/'}>
-            <img src="/vme_new_light.png" alt="brand logo" />
-        </Link>
-        
+    <div className='w-full sticky top-0 left-0 flex items-center justify-between bg-white dark:bg-black p-4 navbar'>
+      <Link title='Victoria Manny Empire' to='/' className='h-12 w-12 rounded-md'>
+        {currentMode === 'Dark' ? (
+          <img src={darklogo} alt='vicky manny logo' className='h-full w-full object-cover rounded-md' />
+        ) : (
+          <img src={logo} alt='vicky manny logo' className='h-full w-full object-cover rounded-md' />
+        )}
+      </Link>
 
-        <h1>Victoria Manny Empire</h1>
-
-        <ul>
-            <li>
-                <Link to={'/'}>Home</Link>
-            </li>
-            <li>
-                <Link to={'/store'}>4K Boutique</Link>
-            </li>
-            <li>
-                <Link to={'/gallery'}>Gallery</Link>
-            </li>
-            <li>
-                <Link to={'/contact'}>Contact</Link>
-            </li>
-        </ul>
-
-        <div className={clicked ? 'menu-button close': 'menu-button'} onClick={handleClick}>
-            <div className="button-lines"></div>
-            <div className="button-lines"></div>
-            <div className="button-lines"></div>
+      <div className='flex items-center gap-4'>
+        {currentMode === 'Light' ? (
+          <IconButton title='Toggle light mode' icon={<HiOutlineMoon />} onClick={() => setThemeMode('Dark')} />
+        ) :(
+          <IconButton title='Toggle dark mode' icon={<HiOutlineSun />} onClick={() => setThemeMode('Light')} />
+        )}
+        <IconButton title='Cart' icon={<HiOutlineShoppingBag />} onClick={() => handleClick('cart')} count={amount} />
+        <div className='md:flex hidden items-center gap-2'>
+          {NAVLINKS.map((link) => (
+            <NavLinks key={link.id} to={link.link} name={link.name} />
+          ))}
         </div>
-        <div className={clicked ? 'menu show' : 'menu'} onClick={() => setClicked(!clicked)} >
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to={'/'}>Home</Link>
-                        </li>
-                        <li>
-                            <Link to={'/store'}>4K Boutique</Link>
-                        </li>
-                        <li>
-                            <Link to={'/gallery'}>Gallery</Link>
-                        </li>
-                        <li>
-                            <Link to={'/contact'}>Contact</Link>
-                        </li>
-                    </ul>
-
-                    <div className='group'>
-                        <a href='https://instagram.com/victoriamanny_empire' target='_blank' rel='noreferrer noopener' >
-                            <FiInstagram />
-                        </a>
-                        <a href='' target='_blank' rel='noreferrer noopener' >
-                            <FiFacebook />
-                        </a>
-                    </div>
-                </nav>
+        <div className='md:hidden block'>
+          {activeMenu ? (
+            <button title='Toggle sidebar' onClick={() => setActiveMenu(prev => !prev)} className='p-2 text-black dark:text-white'>
+              <HiX />
+            </button>
+          ) : (
+            <button title='Toggle sidebar' onClick={() => setActiveMenu(prev => !prev)} className='p-2 text-black dark:text-white'>
+              <HiMenuAlt4 />
+            </button>
+          )}
         </div>
-    </nav>
+      </div>
+    </div>
   )
 }
 
-export default NavBar
+export default Navbar

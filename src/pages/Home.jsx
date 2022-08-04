@@ -1,22 +1,18 @@
 import React from 'react'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import NavBar from '../components/NavBar'
-import Section from '../components/Section'
-import StoreAd from '../components/StoreAd'
-import SwiperComponent from '../components/Swiper'
+import { Catalogue, Contact, Footer, Header, Services, Showcase } from '../components'
 
 const Home = () => {
+
   return (
-    <>
-    <Header />
-    <NavBar />
-    <StoreAd />
-    {/* <SwiperComponent /> */}
-    <Section />
-    <Footer />
-    </>
+    <div className='flex flex-col items-center bg-white dark:bg-black'>
+      <Header />
+      <Showcase />
+      <Services />
+      <Catalogue />
+      <Contact />
+      <Footer />
+    </div>
   )
 }
 
