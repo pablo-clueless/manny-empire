@@ -32,6 +32,13 @@ body {
   overflow-x: hidden;
 }
 
+.header {
+  background: url(/src/assets/images/image-5.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .nav-item, .navbar {
   z-index: 1000;
 }
@@ -94,10 +101,6 @@ body {
 .cart__inner {
   transition: 1s transform ease-in-out linear 0.2s;
 }
-
-/* .spin {
-  animation: spin 2s ease-in-out 0s normal forwards infinite;
-} */
 
 @keyframes spinner {
   from {

@@ -6,7 +6,7 @@ const animate = {y: 0,transition: {duration: 1,ease: 'easeInOut' }}
 const Header = () => {
   return (
     <div className='w-full min-h-screen text-black dark:text-white relative'>
-      <div className='grid place-items-center w-full h-full absolute top-0 left-0 bg-image-1 bg-no-repeat bg-cover bg-center'>
+      <div className='grid place-items-center w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover bg-center header'>
         <p className='text-white text-center text-4xl'>
           Victoria Manny Empire
         </p>
