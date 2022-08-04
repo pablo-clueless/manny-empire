@@ -12,7 +12,7 @@ const Catalogue = () => {
           <img src={logo} alt="4k boutique logo" className='w-full h-full object-contain rounded-full' />
         </div>
         <p className='text-4xl uppercase outline-text'>
-          4k Boutique
+          House of Manny
         </p>
       </div>
       <div className='flex flex-wrap items-center justify-center gap-6'>
