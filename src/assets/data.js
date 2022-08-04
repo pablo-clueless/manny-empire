@@ -136,7 +136,7 @@ export const CATALOGUE = [
 export const NAVLINKS = [
     {
         id: '1',
-        name: '4k-Boutique',
+        name: 'Catalogue',
         link: '/catalogue',
     },
     {
