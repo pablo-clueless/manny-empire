@@ -21,7 +21,7 @@ const Footer = () => {
             <img src={logo} alt='vicky manny logo' className='h-full w-full object-cover' />
           )}
         </div>
-        <div className='flex flex-col items-center my-4 gap-1'>
+        <div className='flex flex-col items-center my-4 gap-1 text-black dark:text-white'>
           <div className='flex items-center gap-2'>
             <IoLocationOutline />
             <p>3, Orisunbare Close, Gbagada Phase 2, Lagos.</p>
