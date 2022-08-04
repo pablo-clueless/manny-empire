@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { Catalogue, Checkout, Home, Modeling, Product } from './pages'
-import { Cart, LazyLoader, Navbar, Sidebar } from './components'
+import { Cart, LazyLoader, Sidebar } from './components'
 import { useContextProvider } from './contexts/ContextProvider'
 import { calculateTotal } from './store/slices/cart-slice'
 import { getWithKey } from './lib'
@@ -45,7 +45,7 @@ const App = () => {
         <div className={`w-72 fixed top-0 ${activeMenu ? 'left-0' : '-left-full'} transition-all duration-300 sidebar`}>
           <Sidebar />
         </div>
-        <Navbar />
+        {/* <Navbar /> */}
         <Suspense fallback={<LazyLoader />}>
           <Routes>
             <Route path='/' element={<Home />} />

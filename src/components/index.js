@@ -11,8 +11,10 @@ export { default as Header } from './Header'
 export { default as IconButton } from './IconButton'
 export { default as Input } from './Input'
 export { default as LazyLoader } from './LazyLoader'
-export { default as Navbar } from './Navbar'
 export { default as Services } from './Services'
 export { default as ServiceCard } from './ServiceCard'
 export { default as Showcase } from './Showcase'
 export { default as Sidebar } from './Sidebar'
+
+
+// export { default as Navbar } from './Navbar'
